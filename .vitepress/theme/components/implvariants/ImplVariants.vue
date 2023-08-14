@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, computed, ref, watchEffect } from 'vue'
+import { onBeforeMount, computed, ref, watchEffect } from 'vue'
 import { useData } from 'vitepress'
 import VPSwitch from '../VPSwitch.vue'
 import IconNode from './IconNode.vue'
@@ -11,7 +11,7 @@ const checked = ref(false)
 const toggle = typeof localStorage !== 'undefined' ? useVariant() : () => {}
 const knownImplVariants = ['node', 'java']
 
-onMounted(() => {
+onBeforeMount(() => {
   if (!supportsVariants.value)  return
   let check = currentCheckState()
   setClass(check)
