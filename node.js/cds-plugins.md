@@ -77,7 +77,7 @@ This property refers to a module that implements the plugin machinery in cds, by
 The plugin mechanism is activated by adding this to CLI commands:
 
 ```js
-await cds.plugin
+await cds.plugins
 ```
 
 Currently, the following commands support plugins: `cds-serve`, `cds watch`, `cds run`, `cds env`, `cds deploy`, `cds build`, `cds.test()`.
